@@ -2,17 +2,12 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 import os
 import json
+from sys import argv
 
 
 if __name__ == "__main__":
-    # Retrieve arguments
-    argument_parser = argparse.ArgumentParser()
-    argument_parser.add_argument("hf_token", "--string", type=str, required=True)
-
-    args = argument_parser.parse_args()
-
     cache_dir = "/mnt/query-llama3/hf_cache"
-    token = args.hf_token
+    token = argv[1]
     dataset_file = "/mnt/query-llama3/toy_trees.json"
     model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
     output_file = "/mnt/query-llama3/predictions.jsonl"
