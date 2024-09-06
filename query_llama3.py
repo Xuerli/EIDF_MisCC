@@ -6,11 +6,11 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    cache_dir = "/mnt/query-llama3/hf_cache"
+    cache_dir = "/mnt/hf_cache"
     token = argv[1]
-    dataset_file = "/mnt/query-llama3/toy_trees.json"
+    dataset_file = "/mnt/toy_trees.json"
     model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
-    output_file = "/mnt/query-llama3/predictions.jsonl"
+    output_file = "/mnt/predictions.jsonl"
 
 
     with open(dataset_file, "r") as f:
